@@ -107,7 +107,7 @@ form.addEventListener('submit', e => {
     }
   }).then(response => response.json());
 
-  // Enviar al webhook de Zapier para automatizaciones
+  // Enviar al webhook de Make para automatizaciones
   const sendToMake = fetch('6ts8nlb66tmu7xwbl0di358hw7lgkvz6@hook.us2.make.com', {
     method: 'POST',
     body: JSON.stringify(data)
