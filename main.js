@@ -97,28 +97,16 @@ form.addEventListener('submit', e => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
-  // Enviar a FormSubmit.co para recibir la notificación por email
-  const sendToFormSubmit = fetch('https://formsubmit.co/ajax/hola@nexumstudio.agency', {
+  fetch('https://formsubmit.co/ajax/hola@nexumstudio.agency', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json'
     }
-  }).then(response => response.json());
-
-  // Enviar al webhook de Make para automatizaciones
-  const sendToMake = fetch('6ts8nlb66tmu7xwbl0di358hw7lgkvz6@hook.us2.make.com', {
-    method: 'POST',
-    body: JSON.stringify(data)
-  }).catch(error => {
-    // Los webhooks pueden generar advertencias de CORS en el navegador local,
-    // pero los datos se envían correctamente. Manejamos el catch para no bloquear el flujo.
-    console.log('Webhook de Zapier enviado.');
-  });
-
-  Promise.all([sendToFormSubmit, sendToZapier])
-  .then(([resData]) => {
+  })
+  .then(response => response.json())
+  .then(resData => {
     if (resData.success === "true" || resData.success === true) {
       form.reset();
       form.hidden        = true;
