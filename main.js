@@ -108,7 +108,7 @@ form.addEventListener('submit', e => {
   }).then(response => response.json());
 
   // Enviar al webhook de Zapier para automatizaciones
-  const sendToZapier = fetch('https://hooks.zapier.com/hooks/catch/27764243/4bu9hdy/', {
+  const sendToMake = fetch('6ts8nlb66tmu7xwbl0di358hw7lgkvz6@hook.us2.make.com', {
     method: 'POST',
     body: JSON.stringify(data)
   }).catch(error => {
