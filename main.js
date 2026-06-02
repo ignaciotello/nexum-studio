@@ -95,19 +95,14 @@ form.addEventListener('submit', e => {
   btnText.textContent = 'Enviando…';
 
   const formData = new FormData(form);
-  const data = Object.fromEntries(formData);
 
   fetch('https://formsubmit.co/ajax/hola@nexumstudio.agency', {
     method: 'POST',
-    body: JSON.stringify(data),
-    headers: {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
-    }
+    body: formData
   })
   .then(response => response.json())
   .then(resData => {
-    if (resData.success === "true" || resData.success === true) {
+    if (resData.success === "true" || resData.success === true || resData.status === "success") {
       form.reset();
       form.hidden        = true;
       formSuccess.hidden = false;
