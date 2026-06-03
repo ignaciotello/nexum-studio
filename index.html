@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nexum Studio — Sistemas que generan resultados operativos reales</title>
+  <title class="lang-es">Nexum Studio — Sistemas que generan resultados operativos reales</title>
+  <title class="lang-en">Nexum Studio — Systems that generate real operational results</title>
   <meta name="description" content="Automatización inteligente para empresas que quieren escalar sin fricción. Nexum Studio construye sistemas que generan resultados operativos reales.">
   <meta name="author" content="Ignacio Tello — Nexum Studio">
 
@@ -34,11 +35,11 @@
   <!-- ==================== NAV ==================== -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
-      <a href="#hero" class="nav__logo-link" aria-label="Nexum Studio — Inicio">
+      <a href="#hero" class="nav__logo-link" aria-label="Nexum Studio — Inicio / Home">
         <img src="logo.png" alt="Nexum Studio" class="nav__logo">
       </a>
 
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú / Open menu" aria-expanded="false">
         <svg class="icon-menu" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
           <line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line>
         </svg>
@@ -48,10 +49,40 @@
       </button>
 
       <ul class="nav__links" id="navLinks" role="list">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#proceso">Proceso</a></li>
-        <li><a href="#caso">Resultados</a></li>
-        <li><a href="#contacto" class="nav__cta">Contacto</a></li>
+        <li><a href="#servicios"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a></li>
+        <li><a href="#proceso"><span class="lang-es">Proceso</span><span class="lang-en">Process</span></a></li>
+        <li><a href="#caso"><span class="lang-es">Resultados</span><span class="lang-en">Results</span></a></li>
+        <li><a href="#contacto" class="nav__cta"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a></li>
+        <li>
+          <button id="langToggle" class="lang-toggle-btn" aria-label="Cambiar idioma / Change language">
+            <span class="lang-es" style="display: inline-flex; align-items: center; gap: 6px;">
+              <svg width="18" height="12" viewBox="0 0 190 100" style="display: inline-block; vertical-align: middle; border-radius: 1px;">
+                <rect width="190" height="100" fill="#B22234"/>
+                <path d="M0,11.5h190M0,30.8h190M0,50h190M0,69.2h190M0,88.5h190" stroke="#FFF" stroke-width="7.7"/>
+                <rect width="76" height="53.8" fill="#3C3B6E"/>
+                <circle cx="15" cy="15" r="2" fill="#FFF"/>
+                <circle cx="30" cy="15" r="2" fill="#FFF"/>
+                <circle cx="45" cy="15" r="2" fill="#FFF"/>
+                <circle cx="60" cy="15" r="2" fill="#FFF"/>
+                <circle cx="22" cy="27" r="2" fill="#FFF"/>
+                <circle cx="37" cy="27" r="2" fill="#FFF"/>
+                <circle cx="52" cy="27" r="2" fill="#FFF"/>
+                <circle cx="15" cy="39" r="2" fill="#FFF"/>
+                <circle cx="30" cy="39" r="2" fill="#FFF"/>
+                <circle cx="45" cy="39" r="2" fill="#FFF"/>
+                <circle cx="60" cy="39" r="2" fill="#FFF"/>
+              </svg>
+              EN
+            </span>
+            <span class="lang-en" style="display: inline-flex; align-items: center; gap: 6px;">
+              <svg width="18" height="12" viewBox="0 0 750 500" style="display: inline-block; vertical-align: middle; border-radius: 1px;">
+                <rect width="750" height="500" fill="#c60b1e"/>
+                <rect y="125" width="750" height="250" fill="#fae005"/>
+              </svg>
+              ES
+            </span>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -63,14 +94,17 @@
         <div class="hero__left">
           <p class="hero__eyebrow" data-aos="fade-up" data-aos-duration="500">Nexum Studio</p>
           <h1 class="hero__title" data-aos="fade-up" data-aos-delay="80" data-aos-duration="600">
-            Sistemas que generan<br>resultados operativos reales
+            <span class="lang-es">Sistemas que generan<br>resultados operativos reales</span>
+            <span class="lang-en">Systems that generate<br>real operational results</span>
           </h1>
           <p class="hero__sub" data-aos="fade-up" data-aos-delay="160" data-aos-duration="600">
-            Automatización inteligente para empresas<br class="br-desktop"> que quieren escalar sin fricción
+            <span class="lang-es">Automatización inteligente para empresas<br class="br-desktop"> que quieren escalar sin fricción</span>
+            <span class="lang-en">Intelligent automation for companies<br class="br-desktop"> looking to scale without friction</span>
           </p>
           <div class="hero__actions" data-aos="fade-up" data-aos-delay="240" data-aos-duration="500">
             <a href="#contacto" class="btn btn--black hero__btn">
-              Descubre cómo
+              <span class="lang-es">Descubre cómo</span>
+              <span class="lang-en">Discover how</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
               </svg>
@@ -79,12 +113,18 @@
           <div class="hero__stats" data-aos="fade-up" data-aos-delay="320" data-aos-duration="600">
             <div class="hero__stat-item">
               <span class="hero__stat-val">100%</span>
-              <span class="hero__stat-label">Automatizado</span>
+              <span class="hero__stat-label">
+                <span class="lang-es">Automatizado</span>
+                <span class="lang-en">Automated</span>
+              </span>
             </div>
             <div class="hero__stat-divider"></div>
             <div class="hero__stat-item">
               <span class="hero__stat-val">~48h</span>
-              <span class="hero__stat-label">Tiempo de diagnóstico</span>
+              <span class="hero__stat-label">
+                <span class="lang-es">Tiempo de diagnóstico</span>
+                <span class="lang-en">Diagnosis time</span>
+              </span>
             </div>
           </div>
         </div>
@@ -101,9 +141,18 @@
   <section class="section servicios" id="servicios">
     <div class="container">
       <div class="section-header aos-init" data-aos="fade-up" data-aos-duration="500">
-        <p class="label">Servicios</p>
-        <h2 class="section-title">Qué hacemos</h2>
-        <p class="section-sub">Construimos infraestructura operativa que trabaja por ti.</p>
+        <p class="label">
+          <span class="lang-es">Servicios</span>
+          <span class="lang-en">Services</span>
+        </p>
+        <h2 class="section-title">
+          <span class="lang-es">Qué hacemos</span>
+          <span class="lang-en">What we do</span>
+        </h2>
+        <p class="section-sub">
+          <span class="lang-es">Construimos infraestructura operativa que trabaja por ti.</span>
+          <span class="lang-en">We build operational infrastructure that works for you.</span>
+        </p>
       </div>
 
       <div class="servicios__grid">
@@ -113,8 +162,14 @@
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
             </svg>
           </div>
-          <h3 class="service-card__title">Automatización de atención al cliente</h3>
-          <p class="service-card__desc">Agentes de IA que responden al instante, 24/7. Reducís carga operativa sin sacrificar calidad de atención.</p>
+          <h3 class="service-card__title">
+            <span class="lang-es">Automatización de atención al cliente</span>
+            <span class="lang-en">Customer Support Automation</span>
+          </h3>
+          <p class="service-card__desc">
+            <span class="lang-es">Agentes de IA que responden al instante, 24/7. Reducís carga operativa sin sacrificar calidad de atención.</span>
+            <span class="lang-en">AI agents that respond instantly, 24/7. Reduce operational load without sacrificing support quality.</span>
+          </p>
         </div>
 
         <div class="service-card aos-init" data-aos="fade-up" data-aos-delay="80">
@@ -123,8 +178,14 @@
               <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 2a10 10 0 0 1 10 10"></path><circle cx="12" cy="12" r="3"></circle>
             </svg>
           </div>
-          <h3 class="service-card__title">Agentes inteligentes y sistemas RAG</h3>
-          <p class="service-card__desc">Desarrollamos agentes que razonan sobre tu información interna. Decisiones más rápidas, con contexto real.</p>
+          <h3 class="service-card__title">
+            <span class="lang-es">Agentes inteligentes y sistemas RAG</span>
+            <span class="lang-en">Intelligent Agents & RAG Systems</span>
+          </h3>
+          <p class="service-card__desc">
+            <span class="lang-es">Desarrollamos agentes que razonan sobre tu información interna. Decisiones más rápidas, con contexto real.</span>
+            <span class="lang-en">We develop agents that reason over your internal database. Faster decisions, backed by real context.</span>
+          </p>
         </div>
 
         <div class="service-card aos-init" data-aos="fade-up" data-aos-delay="160">
@@ -133,8 +194,14 @@
               <rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path>
             </svg>
           </div>
-          <h3 class="service-card__title">Integración de sistemas e infraestructura</h3>
-          <p class="service-card__desc">Conectamos tus herramientas existentes y eliminamos los cuellos de botella que frenan tu operación.</p>
+          <h3 class="service-card__title">
+            <span class="lang-es">Integración de sistemas e infraestructura</span>
+            <span class="lang-en">Systems Integration & Infrastructure</span>
+          </h3>
+          <p class="service-card__desc">
+            <span class="lang-es">Conectamos tus herramientas existentes y eliminamos los cuellos de botella que frenan tu operación.</span>
+            <span class="lang-en">We connect your existing tools and eliminate the bottlenecks that slow down your operations.</span>
+          </p>
         </div>
       </div>
     </div>
@@ -144,9 +211,18 @@
   <section class="section proceso" id="proceso">
     <div class="container">
       <div class="section-header aos-init" data-aos="fade-up" data-aos-duration="500">
-        <p class="label">Cómo funciona</p>
-        <h2 class="section-title">Nuestro proceso</h2>
-        <p class="section-sub">4 pasos simples para transformar tu operación.</p>
+        <p class="label">
+          <span class="lang-es">Cómo funciona</span>
+          <span class="lang-en">How it works</span>
+        </p>
+        <h2 class="section-title">
+          <span class="lang-es">Nuestro proceso</span>
+          <span class="lang-en">Our process</span>
+        </h2>
+        <p class="section-sub">
+          <span class="lang-es">4 pasos simples para transformar tu operación.</span>
+          <span class="lang-en">4 simple steps to transform your operations.</span>
+        </p>
       </div>
 
       <div class="proceso__grid">
@@ -158,8 +234,14 @@
               <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </div>
-          <h3 class="proceso-step__title">Diagnóstico</h3>
-          <p class="proceso-step__desc">Analizamos tus procesos actuales e identificamos los puntos exactos donde la automatización genera más impacto.</p>
+          <h3 class="proceso-step__title">
+            <span class="lang-es">Diagnóstico</span>
+            <span class="lang-en">Diagnosis</span>
+          </h3>
+          <p class="proceso-step__desc">
+            <span class="lang-es">Analizamos tus procesos actuales e identificamos los puntos exactos donde la automatización genera más impacto.</span>
+            <span class="lang-en">We analyze your current processes and identify the exact points where automation drives the most impact.</span>
+          </p>
         </div>
 
         <div class="proceso-step aos-init" data-aos="fade-up" data-aos-delay="80">
@@ -169,8 +251,14 @@
               <rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path>
             </svg>
           </div>
-          <h3 class="proceso-step__title">Arquitectura</h3>
-          <p class="proceso-step__desc">Diseñamos la solución personalizada: agentes, flujos e integraciones adaptados a tu stack actual.</p>
+          <h3 class="proceso-step__title">
+            <span class="lang-es">Arquitectura</span>
+            <span class="lang-en">Architecture</span>
+          </h3>
+          <p class="proceso-step__desc">
+            <span class="lang-es">Diseñamos la solución personalizada: agentes, flujos e integraciones adaptados a tu stack actual.</span>
+            <span class="lang-en">We design a custom solution: agents, workflows, and integrations tailored to your current stack.</span>
+          </p>
         </div>
 
         <div class="proceso-step aos-init" data-aos="fade-up" data-aos-delay="160">
@@ -180,8 +268,14 @@
               <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
             </svg>
           </div>
-          <h3 class="proceso-step__title">Implementación</h3>
-          <p class="proceso-step__desc">Construimos e integramos el sistema en tu operación real. Sin disruption, sin cambiar lo que ya funciona.</p>
+          <h3 class="proceso-step__title">
+            <span class="lang-es">Implementación</span>
+            <span class="lang-en">Implementation</span>
+          </h3>
+          <p class="proceso-step__desc">
+            <span class="lang-es">Construimos e integramos el sistema en tu operación real. Sin disruption, sin cambiar lo que ya funciona.</span>
+            <span class="lang-en">We build and integrate the system into your actual operations. Zero disruption, keeping what already works.</span>
+          </p>
         </div>
 
         <div class="proceso-step aos-init" data-aos="fade-up" data-aos-delay="240">
@@ -191,8 +285,14 @@
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
             </svg>
           </div>
-          <h3 class="proceso-step__title">Resultados</h3>
-          <p class="proceso-step__desc">Monitoreamos y optimizamos continuamente. Los sistemas mejoran con el tiempo y los datos de tu negocio.</p>
+          <h3 class="proceso-step__title">
+            <span class="lang-es">Resultados</span>
+            <span class="lang-en">Results</span>
+          </h3>
+          <p class="proceso-step__desc">
+            <span class="lang-es">Monitoreamos y optimizamos continuamente. Los sistemas mejoran con el tiempo y los datos de tu negocio.</span>
+            <span class="lang-en">We continuously monitor and optimize. The systems improve over time using your business data.</span>
+          </p>
         </div>
 
       </div>
@@ -203,41 +303,76 @@
   <section class="section caso" id="caso">
     <div class="container">
       <div class="section-header aos-init" data-aos="fade-up" data-aos-duration="500">
-        <p class="label">Caso de éxito</p>
-        <h2 class="section-title">Resultados reales</h2>
+        <p class="label">
+          <span class="lang-es">Caso de éxito</span>
+          <span class="lang-en">Case Study</span>
+        </p>
+        <h2 class="section-title">
+          <span class="lang-es">Resultados reales</span>
+          <span class="lang-en">Real results</span>
+        </h2>
       </div>
 
       <div class="caso__card aos-init" data-aos="fade-up" data-aos-delay="80" data-aos-duration="600">
         <div class="caso__top">
           <div class="caso__info">
             <h3 class="caso__company">TechStart E-commerce</h3>
-            <p class="caso__challenge">Recibían 200+ consultas diarias sin capacidad de responder rápido — perdían clientes antes de la primera respuesta.</p>
+            <p class="caso__challenge">
+              <span class="lang-es">Recibían 200+ consultas diarias sin capacidad de responder rápido — perdían clientes antes de la primera respuesta.</span>
+              <span class="lang-en">Received 200+ daily inquiries with no quick response capacity — losing customers before the first reply.</span>
+            </p>
           </div>
-          <div class="caso__badge" aria-label="Estado: Implementado">
+          <div class="caso__badge" aria-label="Estado: Implementado / Status: Implemented">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Implementado
+            <span class="lang-es">Implementado</span>
+            <span class="lang-en">Implemented</span>
           </div>
         </div>
 
         <div class="caso__solution">
-          <p><strong>Solución:</strong> Implementamos un agente de IA que responde consultas al instante, aprende del catálogo y deriva solo los casos complejos al equipo humano.</p>
+          <p>
+            <strong>
+              <span class="lang-es">Solución:</span>
+              <span class="lang-en">Solution:</span>
+            </strong> 
+            <span class="lang-es">Implementamos un agente de IA que responde consultas al instante, aprende del catálogo y deriva solo los casos complejos al equipo humano.</span>
+            <span class="lang-en">We implemented an AI agent that answers inquiries instantly, learns from the catalog, and escalates only complex cases to human support.</span>
+          </p>
         </div>
 
         <div class="caso__metrics">
           <div class="metric">
             <span class="metric__value">30s</span>
-            <span class="metric__label">Tiempo de respuesta</span>
-            <span class="metric__before">Antes: 2 horas</span>
+            <span class="metric__label">
+              <span class="lang-es">Tiempo de respuesta</span>
+              <span class="lang-en">Response time</span>
+            </span>
+            <span class="metric__before">
+              <span class="lang-es">Antes: 2 horas</span>
+              <span class="lang-en">Before: 2 hours</span>
+            </span>
           </div>
           <div class="metric metric--center">
             <span class="metric__value">+35%</span>
-            <span class="metric__label">Incremento en conversión</span>
-            <span class="metric__before">Respuestas inmediatas = más ventas</span>
+            <span class="metric__label">
+              <span class="lang-es">Incremento en conversión</span>
+              <span class="lang-en">Conversion increase</span>
+            </span>
+            <span class="metric__before">
+              <span class="lang-es">Respuestas inmediatas = más ventas</span>
+              <span class="lang-en">Immediate responses = more sales</span>
+            </span>
           </div>
           <div class="metric">
             <span class="metric__value">−60%</span>
-            <span class="metric__label">Reducción en atención manual</span>
-            <span class="metric__before">El equipo enfocado en lo que importa</span>
+            <span class="metric__label">
+              <span class="lang-es">Reducción en atención manual</span>
+              <span class="lang-en">Reduction in manual support</span>
+            </span>
+            <span class="metric__before">
+              <span class="lang-es">El equipo enfocado en lo que importa</span>
+              <span class="lang-en">The team focused on what matters</span>
+            </span>
           </div>
         </div>
       </div>
@@ -249,68 +384,101 @@
     <div class="container">
       <div class="section-header aos-init" data-aos="fade-up" data-aos-duration="500">
         <p class="label">FAQ</p>
-        <h2 class="section-title">Preguntas frecuentes</h2>
+        <h2 class="section-title">
+          <span class="lang-es">Preguntas frecuentes</span>
+          <span class="lang-en">Frequently Asked Questions</span>
+        </h2>
       </div>
 
       <div class="faq__list aos-init" data-aos="fade-up" data-aos-delay="60">
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>¿Cuánto cuesta?</span>
+            <span>
+              <span class="lang-es">¿Cuánto cuesta?</span>
+              <span class="lang-en">How much does it cost?</span>
+            </span>
             <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
           <div class="faq__answer" hidden="">
-            <p>Depende de tu operación y complejidad. Ofrecemos <strong>diagnóstico gratuito</strong> para darte una propuesta personalizada ajustada a tu presupuesto.</p>
+            <p>
+              <span class="lang-es">Depende de tu operación y complejidad. Ofrecemos <strong>diagnóstico gratuito</strong> para darte una propuesta personalizada ajustada a tu presupuesto.</span>
+              <span class="lang-en">It depends on your operations and complexity. We offer a <strong>free diagnosis</strong> to give you a custom proposal tailored to your budget.</span>
+            </p>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>¿Cuánto tarda la implementación?</span>
+            <span>
+              <span class="lang-es">¿Cuánto tarda la implementación?</span>
+              <span class="lang-en">How long does implementation take?</span>
+            </span>
             <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
           <div class="faq__answer" hidden="">
-            <p>Entre 2 y 4 semanas. Automatizaciones simples: 2 semanas. Agentes IA + integraciones complejas: 3–4 semanas.</p>
+            <p>
+              <span class="lang-es">Entre 2 y 4 semanas. Automatizaciones simples: 2 semanas. Agentes IA + integraciones complejas: 3–4 semanas.</span>
+              <span class="lang-en">Between 2 and 4 weeks. Simple automations: 2 weeks. AI agents + complex integrations: 3–4 weeks.</span>
+            </p>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>¿Qué sucede si algo falla?</span>
+            <span>
+              <span class="lang-es">¿Qué sucede si algo falla?</span>
+              <span class="lang-en">What happens if something goes wrong?</span>
+            </span>
             <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
           <div class="faq__answer" hidden="">
-            <p>Monitoreo 24/7 y soporte dedicado. Si algo falla en los primeros <strong>30 días, lo arreglamos sin costo adicional</strong>.</p>
+            <p>
+              <span class="lang-es">Monitoreo 24/7 y soporte dedicado. Si algo falla en los primeros <strong>30 días, lo arreglamos sin costo adicional</strong>.</span>
+              <span class="lang-en">24/7 monitoring and dedicated support. If anything goes wrong in the first <strong>30 days, we fix it at no additional cost</strong>.</span>
+            </p>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>¿Necesito cambiar mi infraestructura actual?</span>
+            <span>
+              <span class="lang-es">¿Necesito cambiar mi infraestructura actual?</span>
+              <span class="lang-en">Do I need to change my current infrastructure?</span>
+            </span>
             <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
           <div class="faq__answer" hidden="">
-            <p>No. Conectamos con lo que ya tenés — CRM, WhatsApp, Email, etc. <strong>Cero disruption</strong> en tu operación.</p>
+            <p>
+              <span class="lang-es">No. Conectamos con lo que ya tenés — CRM, WhatsApp, Email, etc. <strong>Cero disruption</strong> en tu operación.</span>
+              <span class="lang-en">No. We connect with what you already have — CRM, WhatsApp, Email, etc. <strong>Zero disruption</strong> to your operations.</span>
+            </p>
           </div>
         </div>
 
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            <span>¿Puedo ver resultados antes de comprometer?</span>
+            <span>
+              <span class="lang-es">¿Puedo ver resultados antes de comprometer?</span>
+              <span class="lang-en">Can I see results before committing?</span>
+            </span>
             <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
           </button>
           <div class="faq__answer" hidden="">
-            <p>Sí. Ofrecemos consultas y demostraciones personalizadas sin compromiso. Contactanos para discutir opciones.</p>
+            <p>
+              <span class="lang-es">Sí. Ofrecemos consultas y demostraciones personalizadas sin compromiso. Contactanos para discutir opciones.</span>
+              <span class="lang-en">Yes. We offer custom consultations and demos without commitment. Contact us to discuss options.</span>
+            </p>
           </div>
         </div>
 
@@ -324,21 +492,33 @@
       <div class="contacto__grid">
 
         <div class="contacto__text aos-init" data-aos="fade-right" data-aos-duration="600">
-          <p class="label">Contacto</p>
-          <h2 class="section-title">¿Listo para escalar?</h2>
-          <p class="body-text">Contanos sobre tu operación. En 48 horas te presentamos un diagnóstico inicial sin costo.</p>
+          <p class="label">
+            <span class="lang-es">Contacto</span>
+            <span class="lang-en">Contact</span>
+          </p>
+          <h2 class="section-title">
+            <span class="lang-es">¿Listo para escalar?</span>
+            <span class="lang-en">Ready to scale?</span>
+          </h2>
+          <p class="body-text">
+            <span class="lang-es">Contanos sobre tu operación. En 48 horas te presentamos un diagnóstico inicial sin costo.</span>
+            <span class="lang-en">Tell us about your operations. Within 48 hours, we will present a free initial diagnosis.</span>
+          </p>
           <ul class="contacto__points" role="list">
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Sin compromiso
+              <span class="lang-es">Sin compromiso</span>
+              <span class="lang-en">No commitment</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Diagnóstico personalizado
+              <span class="lang-es">Diagnóstico personalizado</span>
+              <span class="lang-en">Custom diagnosis</span>
             </li>
             <li>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-              Respuesta en 48h
+              <span class="lang-es">Respuesta en 48h</span>
+              <span class="lang-en">48h Response time</span>
             </li>
           </ul>
         </div>
@@ -347,7 +527,10 @@
           <form class="form" id="contactForm" novalidate="">
 
             <div class="form__group">
-              <label class="form__label" for="nombre">Nombre <span aria-hidden="true">*</span></label>
+              <label class="form__label" for="nombre">
+                <span class="lang-es">Nombre completo <span aria-hidden="true">*</span></span>
+                <span class="lang-en">Full name <span aria-hidden="true">*</span></span>
+              </label>
               <input class="form__input" type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" autocomplete="name" required="">
               <span class="form__error" id="nombreError" role="alert" aria-live="polite"></span>
             </div>
@@ -359,25 +542,35 @@
             </div>
 
             <div class="form__group">
-              <label class="form__label" for="empresa">Empresa</label>
+              <label class="form__label" for="empresa">
+                <span class="lang-es">Empresa</span>
+                <span class="lang-en">Company</span>
+              </label>
               <input class="form__input" type="text" id="empresa" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization">
             </div>
 
             <div class="form__group">
-              <label class="form__label" for="mensaje">Mensaje <span aria-hidden="true">*</span></label>
-              <textarea class="form__input form__textarea" id="mensaje" name="mensaje" placeholder="Contanos brevemente tu situación actual y qué querés mejorar..." rows="4" required=""></textarea>
+              <label class="form__label" for="mensaje">
+                <span class="lang-es">Mensaje <span aria-hidden="true">*</span></span>
+                <span class="lang-en">Message <span aria-hidden="true">*</span></span>
+              </label>
+              <textarea class="form__input form__textarea" id="mensaje" name="mensaje" placeholder="Contanos brevemente tu situación..." rows="4" required=""></textarea>
               <span class="form__error" id="mensajeError" role="alert" aria-live="polite"></span>
             </div>
 
             <button type="submit" class="btn btn--black btn--full" id="submitBtn">
-              <span class="btn__text">Enviar consulta</span>
+              <span class="btn__text">
+                <span class="lang-es">Enviar consulta</span>
+                <span class="lang-en">Send inquiry</span>
+              </span>
               <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </button>
 
             <p class="form__success" id="formSuccess" hidden="" role="status">
-              Mensaje enviado. Te contactamos en las próximas 48 horas.
+              <span class="lang-es">Mensaje enviado. Te contactamos en las próximas 48 horas.</span>
+              <span class="lang-en">Message sent. We will contact you within the next 48 hours.</span>
             </p>
 
           </form>
@@ -392,17 +585,23 @@
       <div class="footer__inner">
         <div class="footer__brand">
           <img src="logo.png" alt="Nexum Studio" class="footer__logo" width="96" height="32">
-          <p class="footer__tagline">Inteligencia práctica, no artificial.</p>
+          <p class="footer__tagline">
+            <span class="lang-es">Inteligencia práctica, no artificial.</span>
+            <span class="lang-en">Practical intelligence, not artificial.</span>
+          </p>
         </div>
-        <nav class="footer__nav" aria-label="Navegación del pie de página">
+        <nav class="footer__nav" aria-label="Navegación del pie de página / Footer navigation">
           <a href="#hero">Home</a>
-          <a href="#servicios">Servicios</a>
-          <a href="#proceso">Proceso</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#servicios"><span class="lang-es">Servicios</span><span class="lang-en">Services</span></a>
+          <a href="#proceso"><span class="lang-es">Proceso</span><span class="lang-en">Process</span></a>
+          <a href="#contacto"><span class="lang-es">Contacto</span><span class="lang-en">Contact</span></a>
         </nav>
       </div>
       <div class="footer__bottom">
-        <p>© 2024 Nexum Studio. Todos los derechos reservados.</p>
+        <p>
+          <span class="lang-es">© 2024 Nexum Studio. Todos los derechos reservados.</span>
+          <span class="lang-en">© 2024 Nexum Studio. All rights reserved.</span>
+        </p>
         <p><a href="mailto:hola@nexumstudio.agency">hola@nexumstudio.agency</a></p>
       </div>
     </div>
@@ -411,4 +610,5 @@
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="main.js"></script>
 
-</body></html>
+</body>
+</html>

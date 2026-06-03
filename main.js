@@ -2,6 +2,46 @@
    NEXUM STUDIO — main.js
 ================================================ */
 
+// --- Language detection & selection ---
+const getLang = () => document.documentElement.getAttribute('lang') || 'es';
+
+const updatePlaceholders = () => {
+  const isEn = getLang() === 'en';
+  const nameInput = document.getElementById('nombre');
+  const emailInput = document.getElementById('email');
+  const companyInput = document.getElementById('empresa');
+  const messageInput = document.getElementById('mensaje');
+
+  if (nameInput) nameInput.placeholder = isEn ? 'Your full name' : 'Tu nombre completo';
+  if (emailInput) emailInput.placeholder = isEn ? 'you@company.com' : 'tu@empresa.com';
+  if (companyInput) companyInput.placeholder = isEn ? 'Your company name' : 'Nombre de tu empresa';
+  if (messageInput) messageInput.placeholder = isEn ? 'Tell us briefly about your current situation and what you want to improve...' : 'Contanos brevemente tu situación actual y qué querés mejorar...';
+};
+
+const setLanguage = (lang) => {
+  document.documentElement.setAttribute('lang', lang);
+  localStorage.setItem('preferredLang', lang);
+  updatePlaceholders();
+};
+
+const savedLang = localStorage.getItem('preferredLang');
+if (savedLang) {
+  setLanguage(savedLang);
+} else {
+  const userLang = navigator.language || navigator.userLanguage;
+  setLanguage(userLang.startsWith('en') ? 'en' : 'es');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  updatePlaceholders();
+  const langToggle = document.getElementById('langToggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      setLanguage(getLang() === 'es' ? 'en' : 'es');
+    });
+  }
+});
+
 // --- AOS ---
 AOS.init({
   duration: 560,
@@ -48,13 +88,20 @@ const submitBtn   = document.getElementById('submitBtn');
 const formSuccess = document.getElementById('formSuccess');
 
 const rules = {
-  nombre:  v => v.trim() ? '' : 'El nombre es requerido.',
-  email:   v => {
-    if (!v.trim()) return 'El email es requerido.';
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())
-      ? '' : 'Ingresá un email válido.';
+  nombre:  v => {
+    const isEn = getLang() === 'en';
+    return v.trim() ? '' : (isEn ? 'Name is required.' : 'El nombre es requerido.');
   },
-  mensaje: v => v.trim() ? '' : 'El mensaje es requerido.',
+  email:   v => {
+    const isEn = getLang() === 'en';
+    if (!v.trim()) return isEn ? 'Email is required.' : 'El email es requerido.';
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim())
+      ? '' : (isEn ? 'Please enter a valid email.' : 'Ingresá un email válido.');
+  },
+  mensaje: v => {
+    const isEn = getLang() === 'en';
+    return v.trim() ? '' : (isEn ? 'Message is required.' : 'El mensaje es requerido.');
+  },
 };
 
 function setError(fieldId, msg) {
@@ -92,7 +139,8 @@ form.addEventListener('submit', e => {
   submitBtn.disabled = true;
   const btnText = submitBtn.querySelector('.btn__text');
   const originalText = btnText.textContent;
-  btnText.textContent = 'Enviando…';
+  const isEn = getLang() === 'en';
+  btnText.textContent = isEn ? 'Sending...' : 'Enviando…';
 
   const formData = new FormData(form);
 
@@ -107,13 +155,13 @@ form.addEventListener('submit', e => {
       form.hidden        = true;
       formSuccess.hidden = false;
     } else {
-      alert(resData.message || "Hubo un problema al enviar la consulta. Por favor, intente nuevamente.");
+      alert(resData.message || (isEn ? "There was a problem sending your inquiry. Please try again." : "Hubo un problema al enviar la consulta. Por favor, intente nuevamente."));
       submitBtn.disabled = false;
       btnText.textContent = originalText;
     }
   })
   .catch(error => {
-    alert("Hubo un error de conexión al enviar el formulario. Por favor, intente nuevamente.");
+    alert(isEn ? "There was a connection error. Please try again." : "Hubo un error de conexión al enviar el formulario. Por favor, intente nuevamente.");
     submitBtn.disabled = false;
     btnText.textContent = originalText;
   });
